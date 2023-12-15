@@ -13,5 +13,8 @@ FROM ghcr.io/home-assistant/home-assistant:stable
 # Copy the entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 
+# Copy the configuration folder
+COPY ./config /config
+
 # Set the script as the entrypoint
 ENTRYPOINT ["/entrypoint.sh"]
